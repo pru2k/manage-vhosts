@@ -72,7 +72,7 @@ fi
 echo "Creating the new $name virtual host file that has a webroot of: $webroot"
 
 # Replace placeholders in the vhost template file
-sudo cp ./templates/vhost-template.conf /etc/apache2/sites-available/$name.conf
+sudo cp ./templates/vhost-template.conf /etc/apache2/sites-available/$name.local.conf
 sudo cp ./templates/sublime-project.template $projectroot/$name.sublime-project
 sudo cp ./templates/readme.md.template $projectroot/README.md
 sudo sed -i 's/template.email/'$email'/g' /etc/apache2/sites-available/$name.conf
